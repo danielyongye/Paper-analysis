@@ -74,7 +74,6 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html',
-            filename: 'index.html',
             title: 'Paper analysis',
         }),
     ],
