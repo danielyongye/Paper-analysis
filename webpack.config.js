@@ -35,14 +35,6 @@ module.exports = {
                         loader: 'css-loader', // translates CSS into CommonJS
                         options: { sourceMap: !IS_PROD },
                     },
-                    {
-                        loader: 'postcss-loader',
-                        options: {           // 如果没有options这个选项将会报错 No PostCSS Config found
-                            plugins: (loader) => [
-                                require('autoprefixer')(), //CSS浏览器兼容
-                            ]
-                        }
-                    },
                 ],
             },
             {
@@ -53,18 +45,8 @@ module.exports = {
                         loader: 'css-loader', // translates CSS into CommonJS
                         options: { sourceMap: !IS_PROD },
                     },
-                    {
-                        loader: 'fast-sass-loader', // compiles Sass to CSS
-                        options: { sourceMap: !IS_PROD },
-                    },
-                    {
-                        loader: 'postcss-loader',
-                        options: {           // 如果没有options这个选项将会报错 No PostCSS Config found
-                            plugins: (loader) => [
-                                require('autoprefixer')(), //CSS浏览器兼容
-                            ]
-                        }
-                    },
+                    'sass-loader', // compiles Sass to CSS
+                    
                 ],
             }
         ],
