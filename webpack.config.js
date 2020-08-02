@@ -55,8 +55,8 @@ module.exports = {
         extensions: ['.jsx', '.mjs', '.js', '.ts', '.tsx', '.json'],
     },
     plugins: [
-        // new CleanWebpackPlugin([BUILD_DIST]),
-        // new uglify(),
+        new CleanWebpackPlugin([BUILD_DIST]),
+        new uglify(),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
